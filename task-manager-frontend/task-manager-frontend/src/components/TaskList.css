@@ -1,0 +1,94 @@
+.task-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.welcome-message {
+    font-size: 16px;
+    color: #333;
+}
+
+.logout-button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+    .logout-button:hover {
+        background-color: #c82333;
+    }
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+    .task-list li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: #333;
+    }
+
+        .task-list li.completed {
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+
+.list-tasks-button {
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+    .list-tasks-button:hover {
+        background-color: #218838;
+    }
+
+@media (max-width: 600px) {
+    .list-tasks-button {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .task-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        .task-list li span {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .task-list li .delete-button {
+            align-self: flex-end;
+        }
+}
